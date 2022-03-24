@@ -45,8 +45,9 @@ video.addEventListener("playing", async () => {
       const matchingImage = resizedDetections.map((d) =>
         faceMatcher.findBestMatch(d.descriptor)
       );
-
       console.log(matchingImage[0].label);
+
+      // Code for checking the face detected is same or different person
       if (matchingImage[0].label == "unknown") {
         alert("Someone else image detected");
       }
